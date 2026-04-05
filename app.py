@@ -13,7 +13,7 @@ import json
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="public", static_url_path="")
 app.config["SECRET_KEY"] = settings.secret_key
 
 
