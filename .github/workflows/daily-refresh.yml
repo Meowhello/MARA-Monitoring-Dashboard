@@ -1,0 +1,41 @@
+name: Daily Data Refresh
+
+on:
+  schedule:
+    - cron: '15 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh dashboard data
+        env:
+          COINGECKO_PLAN: demo
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+        run: python refresh_data.py --days 365
+
+      - name: Commit updated JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mara_dashboard.json
+          git diff --cached --quiet || git commit -m "chore: refresh MARA dashboard data"
+          git push

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ symbol }} mNAV 四因子監測平台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">DAT.co Dashboard</p>
+          <h1>{{ symbol }} Realized mNAV 四因子監測平台</h1>
+          <p class="subtitle">
+            以 MARA 為例，追蹤 realized mNAV 與四個核心驅動因子：股價、股數 / 稀釋、BTC 價格、BTC 持幣量。
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="pill">指標：Realized mNAV</div>
+          <div class="pill">公司：{{ company }}</div>
+          <div class="pill" id="last-updated-pill">資料更新中...</div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card metrics-card">
+          <div class="section-head">
+            <div>
+              <h2>最新概況</h2>
+              <p>用 4 個核心因子拆解 mNAV 的變化。</p>
+            </div>
+          </div>
+          <div class="metrics" id="metrics"></div>
+        </section>
+
+        <section class="card chart-card">
+          <div class="section-head">
+            <div>
+              <h2>Realized mNAV 走勢</h2>
+              <p>每日頻率，顯示 MARA 的估值相對於 BTC 資產價值的變化。</p>
+            </div>
+          </div>
+          <canvas id="mnavChart"></canvas>
+        </section>
+
+        <section class="card chart-card">
+          <div class="section-head">
+            <div>
+              <h2>四因子標準化走勢</h2>
+              <p>將四個因子都標準化為起點 = 100，方便直接比較方向與幅度。</p>
+            </div>
+          </div>
+          <canvas id="factorChart"></canvas>
+        </section>
+
+        <section class="card chart-card small-card">
+          <div class="section-head">
+            <div>
+              <h2>最近 7 天平均 mNAV 因子貢獻</h2>
+              <p>以最近 7 筆有效資料做平均，避免單日缺值或週末造成只剩單一柱狀。</p>
+            </div>
+          </div>
+          <canvas id="contributionChart"></canvas>
+        </section>
+
+        <section class="card summary-card">
+          <div class="section-head">
+            <div>
+              <h2>自動摘要（規則版）</h2>
+              <p>依近 7 天、30 天與四因子變化，自動產生簡短解讀；目前未串接 LLM。</p>
+            </div>
+          </div>
+          <ul id="summaryList" class="summary-list"></ul>
+        </section>
+
+        <section class="card methodology-card">
+          <div class="section-head">
+            <div>
+              <h2>方法說明</h2>
+              <p>這一區是交代資料來源、公式與假設，讓圖表的計算方式清楚可追溯。</p>
+            </div>
+          </div>
+          <code class="formula" id="formula"></code>
+          <ul id="methodologyNotes" class="summary-list compact"></ul>
+        </section>
+
+        <section class="card table-card">
+          <div class="section-head">
+            <div>
+              <h2>近期 Treasury 事件</h2>
+              <p>此表是公司 treasury 事件紀錄，不是逐筆成交明細；日期可能相隔數週，未揭露金額者會以「—」顯示。</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>日期</th>
+                  <th>類型</th>
+                  <th>持幣變化</th>
+                  <th>持幣餘額</th>
+                  <th>交易金額(USD)</th>
+                  <th>來源</th>
+                </tr>
+              </thead>
+              <tbody id="transactionsBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
