@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T04:04:17.019175+00:00",
+  "generated_at": "2026-07-03T14:57:52.400314+00:00",
   "company": {
     "name": "MARA Holdings",
     "symbol": "MARA",
@@ -26,20 +26,20 @@
   },
   "latest": {
     "date": "2026-07-03",
-    "realized_mnav": 2.1821,
+    "realized_mnav": 2.1547,
     "stock_price": 12.4,
-    "btc_price": 61372.45,
+    "btc_price": 62151.28,
     "btc_holdings": 35303.0,
     "shares_outstanding": 381270503,
-    "total_asset_value": 2166631655.43,
+    "total_asset_value": 2194126482.49,
     "btc_per_share": 9.259e-05,
     "market_cap_proxy": 4727754091.76,
-    "mnav_change_7d_pct": -17.0245,
-    "mnav_change_30d_pct": -3.5367
+    "mnav_change_7d_pct": -18.0643,
+    "mnav_change_30d_pct": -4.7455
   },
   "quick_summary": [
-    "目前 MARA 的 realized mNAV 為 2.18；近 7 天約 下降 17.02%，近 30 天約 下降 3.54%。",
-    "近 30 天 MARA 股價變動約 -11.17%，BTC 價格變動約 -7.92%。",
+    "目前 MARA 的 realized mNAV 為 2.15；近 7 天約 下降 18.06%，近 30 天約 下降 4.75%。",
+    "近 30 天 MARA 股價變動約 -11.17%，BTC 價格變動約 -6.75%。",
     "為避免單日缺值干擾，下方柱狀圖改看最近 7 天平均貢獻；目前影響最大的因子是「股價」，平均近似貢獻約 -2.27%。",
     "此摘要為規則式自動生成：根據近 7 天、30 天變化與四因子平均貢獻套用固定句型，並非 LLM 生成。"
   ],
@@ -8552,27 +8552,27 @@
     },
     {
       "date": "2026-07-03",
-      "btc_price": 61372.45150345,
+      "btc_price": 62151.27559955,
       "btc_holdings": 35303.0,
       "holding_value_usd": 2170686116.9610744,
       "stock_price": 12.39999962,
       "stock_close": 12.39999962,
       "stock_volume": 0.0,
       "shares_outstanding": 381270503.0,
-      "total_asset_value": 2166631655.4263964,
-      "realized_mnav": 2.18207561,
+      "total_asset_value": 2194126482.4910817,
+      "realized_mnav": 2.15473179,
       "btc_per_share": 9.259e-05,
       "market_cap_proxy": 4727754091.756845,
       "stock_price_pct": 0.0,
-      "btc_price_pct": 2.32169573,
+      "btc_price_pct": 3.62017087,
       "btc_holdings_pct": 0.0,
       "shares_outstanding_pct": 0.0,
-      "realized_mnav_pct": -2.26901608,
+      "realized_mnav_pct": -3.4936932,
       "contrib_stock_price": 0.0,
       "contrib_shares": 0.0,
-      "contrib_btc_price": -2.2951544,
+      "contrib_btc_price": -3.55618244,
       "contrib_btc_holdings": -0.0,
-      "contrib_total": -2.2951544
+      "contrib_total": -3.55618244
     }
   ],
   "sources": [
