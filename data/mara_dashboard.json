@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T04:59:57.262773+00:00",
+  "generated_at": "2026-09-01T16:57:15.620564+00:00",
   "company": {
     "name": "MARA Holdings",
     "symbol": "MARA",
@@ -26,21 +26,21 @@
   },
   "latest": {
     "date": "2026-09-01",
-    "realized_mnav": 1.4975,
-    "stock_price": 10.77,
-    "btc_price": 78696.4,
+    "realized_mnav": 1.4515,
+    "stock_price": 10.295,
+    "btc_price": 77609.23,
     "btc_holdings": 35303.0,
     "shares_outstanding": 386299297,
-    "total_asset_value": 2778218888.41,
+    "total_asset_value": 2739838715.03,
     "btc_per_share": 9.139e-05,
-    "market_cap_proxy": 4160443605.52,
-    "mnav_change_7d_pct": -8.6393,
-    "mnav_change_30d_pct": -24.11
+    "market_cap_proxy": 3976951292.09,
+    "mnav_change_7d_pct": -11.4453,
+    "mnav_change_30d_pct": -26.4409
   },
   "quick_summary": [
-    "目前 MARA 的 realized mNAV 為 1.50；近 7 天約 下降 8.64%，近 30 天約 下降 24.11%。",
-    "近 30 天 MARA 股價變動約 -4.86%，BTC 價格變動約 +25.37%。",
-    "為避免單日缺值干擾，下方柱狀圖改看最近 7 天平均貢獻；目前影響最大的因子是「股價」，平均近似貢獻約 -1.34%。",
+    "目前 MARA 的 realized mNAV 為 1.45；近 7 天約 下降 11.45%，近 30 天約 下降 26.44%。",
+    "近 30 天 MARA 股價變動約 -9.05%，BTC 價格變動約 +23.64%。",
+    "為避免單日缺值干擾，下方柱狀圖改看最近 7 天平均貢獻；目前影響最大的因子是「股價」，平均近似貢獻約 -1.99%。",
     "此摘要為規則式自動生成：根據近 7 天、30 天變化與四因子平均貢獻套用固定句型，並非 LLM 生成。"
   ],
   "transactions": [
@@ -7640,27 +7640,27 @@
     },
     {
       "date": "2026-09-01",
-      "btc_price": 78696.39657843,
+      "btc_price": 77609.23193585,
       "btc_holdings": 35303.0,
       "holding_value_usd": 2772740590.8370585,
-      "stock_price": 10.77000046,
-      "stock_close": 10.77000046,
-      "stock_volume": 0.0,
+      "stock_price": 10.29500008,
+      "stock_close": 10.29500008,
+      "stock_volume": 15935066.0,
       "shares_outstanding": 386299297.0,
-      "total_asset_value": 2778218888.408342,
-      "realized_mnav": 1.49752189,
+      "total_asset_value": 2739838715.03146,
+      "realized_mnav": 1.45152752,
       "btc_per_share": 9.139e-05,
-      "market_cap_proxy": 4160443605.5237846,
-      "stock_price_pct": 0.0,
-      "btc_price_pct": 1.33683864,
+      "market_cap_proxy": 3976951292.0872974,
+      "stock_price_pct": -4.41040261,
+      "btc_price_pct": -0.0630962,
       "btc_holdings_pct": 0.0,
       "shares_outstanding_pct": 0.0,
-      "realized_mnav_pct": -1.31920303,
-      "contrib_stock_price": 0.0,
+      "realized_mnav_pct": -4.35005112,
+      "contrib_stock_price": -4.51061858,
       "contrib_shares": 0.0,
-      "contrib_btc_price": -1.3279818,
+      "contrib_btc_price": 0.06311612,
       "contrib_btc_holdings": -0.0,
-      "contrib_total": -1.3279818
+      "contrib_total": -4.44750246
     }
   ],
   "sources": [
